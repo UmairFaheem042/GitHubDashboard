@@ -6,6 +6,7 @@ import Repository from "../components/Repository";
 import timeAgo from "../utils/dateFormatted";
 import LoadingScreen from "../components/LoadingScreen";
 import ErrorPage from "./ErrorPage";
+import Button from "../components/Button";
 
 const User = () => {
   const { username } = useParams();
@@ -15,9 +16,8 @@ const User = () => {
 
   const [loading, setLoading] = useState(true);
   const [errorOccur, setErrorOccur] = useState(true);
-
-  let page = 1;
-  // setErrorOccur(true);
+  const [page, setPage] = useState(1);
+  const [hasMoreRepos, setHasMoreRepos] = useState(true);
 
   useEffect(() => {
     async function fetchUser() {
@@ -35,7 +35,7 @@ const User = () => {
         }
         setUserInfo(data);
         setErrorOccur(false);
-        console.log(data);
+        // console.log(data);
       } catch (error) {
         setErrorOccur(true);
       }
@@ -53,12 +53,30 @@ const User = () => {
         `https://api.github.com/users/${username}/repos?page=${page}`
       );
       const data = await res.json();
+      console.log(data);
 
-      setRepositories(data);
+      if (data.length === 0) {
+        setHasMoreRepos(false);
+      }
+
+      if (data.message) {
+        setErrorOccur(true);
+        setTimeout(() => {
+          setLoading(false);
+        }, 1000);
+        return;
+      }
+
+      setRepositories((prevRepos) => [...prevRepos, ...data]);
+      // setRepositories(data);
     }
 
     fetchRepos();
-  }, [page]);
+  }, [username, page]);
+
+  const handleLoadMore = () => {
+    setPage((prevPage) => prevPage + 1); // Update the page number
+  };
 
   // console.log(userInfo);
   // console.log(repositories);
@@ -138,6 +156,16 @@ const User = () => {
             <p className="notFound">No Repositories Found</p>
           )}
         </div>
+
+        {repositories.length !== 0 && (
+          <div className="pagination">
+            <Button
+              label={"Load More"}
+              onClick={handleLoadMore}
+              disabled={!hasMoreRepos}
+            />
+          </div>
+        )}
       </div>
     </section>
   );

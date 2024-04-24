@@ -205,6 +205,22 @@
   font-weight: 600;
 }
 
+
+.pagination{
+  width: 100%;
+  /* background-color: red; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pagination button{
+  border-radius: 5px;
+  min-width: 100px;
+}
+
+
+
 @media (max-width: 961px) {
   .bio_box {
     background-color: #763ec6;

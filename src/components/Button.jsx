@@ -1,9 +1,19 @@
-import React from 'react'
+import React from "react";
 
-const Button = ({label}) => {
+const Button = ({ label, onClick, disabled }) => {
   return (
-    <button className='btn'>{label}</button>
-  )
-}
+    <button
+      onClick={onClick}
+      className="btn"
+      disabled={disabled}
+      style={{
+        cursor: disabled && "not-allowed",
+        opacity: disabled && 0.5,
+      }}
+    >
+      {label}
+    </button>
+  );
+};
 
-export default Button
+export default Button;
