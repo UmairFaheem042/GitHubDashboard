@@ -1,0 +1,38 @@
+.error_page {
+  flex: 1;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+.error_page h1 {
+  color: white;
+  margin-bottom: -1rem;
+  font-size: 5rem;
+}
+
+.error_page p {
+  margin-bottom: 2rem;
+}
+
+.error_page button {
+  background-color: rgba(255, 255, 255, 0.08);
+  color: white;
+  padding: 0.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  cursor: pointer;
+  font-weight: 600;
+  border-radius: 5px;
+  width: 120px;
+}
+
+@media (max-width: 407px){
+  .error_page h1{
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+  
+}

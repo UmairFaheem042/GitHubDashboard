@@ -1,0 +1,108 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+button,
+input {
+  border: none;
+  outline: none;
+  appearance: none;
+  background: transparent;
+  color: inherit;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  background-color: #0f0f0f;
+  color: rgba(255, 255, 255, 0.55);
+  /* background-color: #0f0f0f;
+  opacity: 0.8;
+  background-image: linear-gradient(#161616 1px, transparent 1px),
+    linear-gradient(to right, #161616 1px, #0f0f0f 1px);
+  background-size: 20px 20px; */
+
+  background-color: #0f0f0f;
+  opacity: 1;
+  background-image: linear-gradient(#161616 2px, transparent 2px),
+    linear-gradient(90deg, #161616 2px, transparent 2px),
+    linear-gradient(#161616 1px, transparent 1px),
+    linear-gradient(90deg, #161616 1px, #0f0f0f 1px);
+  background-size: 50px 50px, 50px 50px, 10px 10px, 10px 10px;
+  background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
+}
+
+.maxWidth {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.App {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  padding: 1rem;
+  font-size: 0.8rem;
+}
+
+footer nav p {
+  text-align: center;
+  width: 100%;
+}
+
+footer p span {
+  color: white;
+  font-weight: 600;
+}
+
+.btn {
+  background-color: rgba(255, 255, 255, 0.08);
+  color: white;
+  padding: 0.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn:hover {
+  background-color: #763ec6;
+  border: 1px solid #763ec6;
+}
+
+.notFound {
+  opacity: 0.3;
+}
+
+.repo_box .notFound {
+  font-size: 3rem;
+  opacity: 1;
+  color: #252525;
+  font-weight: 600;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loadingScreen {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

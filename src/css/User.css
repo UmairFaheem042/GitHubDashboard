@@ -1,0 +1,267 @@
+.user {
+  margin-top: 2rem !important;
+  flex: 1;
+  padding: 1rem;
+  width: 100%;
+}
+
+.user_container {
+  /* display: grid; */
+  /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
+  /* grid-template-columns: repeat(2, 1fr); */
+  display: flex;
+  /* flex-direction: column; */
+  flex-wrap: wrap;
+
+  gap: 1rem;
+}
+
+/* BOX */
+.box {
+  background-color: #161616;
+
+  border: 2px solid rgba(255, 255, 255, 0.11);
+  padding: 1rem;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.profile_box {
+  /* width: 100%; */
+  flex: 1;
+  /* width: 50%; */
+  min-width: 500px;
+  /* width: 500px; */
+}
+
+.user .profile_box img {
+  width: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.profile_box .right_box {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.box h2 {
+  color: white;
+  font-weight: 800;
+}
+.profile_box .right_box-top p {
+  font-weight: 300;
+}
+
+.profile_box .right_box-top,
+.profile_box .right_box-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.profile_box .right_box-bottom p {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.right_box-bottom span {
+  font-weight: 600;
+  color: white;
+}
+
+.bio_box {
+  flex-direction: column;
+  /* flex: 1; */
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 0rem;
+}
+
+.link_box {
+  grid-column: span 2;
+  width: 100%;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.link_box ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  gap: 1.5rem;
+}
+
+.link_box ul li {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.link_box ul li span {
+  width: max-content;
+}
+
+.link_box li span {
+  font-weight: 600;
+  color: white;
+}
+
+.repo_box {
+  margin-top: 2rem;
+  grid-column: span 2;
+}
+
+.repo_box header {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.repo_box h2 {
+  color: white;
+}
+
+.repo_box header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.repos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1rem;
+  /* background-color: bisque; */
+}
+
+.repos .repo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  /* width: 100%; */
+  min-height: 150px;
+}
+
+.repo_top {
+  /* background-color: aquamarine; */
+  width: 100%;
+}
+
+.repo_top header {
+  /* background-color: #763ec6; */
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.repo_top header h2 {
+  /* text-overflow: none; */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1; /* number of lines to show */
+  line-clamp: 1;
+  -webkit-box-orient: vertical;
+  /* font-size: 600; */
+  color: #763ec6;
+}
+
+.repo header span {
+  font-weight: 200;
+  font-size: 0.9rem;
+}
+
+.repo_top p {
+  margin-top: -0.5rem;
+  font-size: 0.85rem;
+  font-weight: 300;
+}
+
+.repo_box .repo_bottom {
+  width: 100%;
+  font-size: 0.85rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.repo_bottom p {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.repo_bottom p.lang,
+.repo_bottom p span {
+  color: white;
+  font-weight: 600;
+}
+
+@media (max-width: 961px) {
+  .bio_box {
+    background-color: #763ec6;
+    width: 100%;
+  }
+}
+
+@media (max-width: 560px) {
+  .box {
+    width: 100% !important;
+  }
+
+  .profile_box {
+    /* width: 100%; */
+    min-width: auto;
+    flex-wrap: wrap;
+    /* align-items: ; */
+  }
+
+  .profile_box img {
+    width: 140px !important;
+  }
+}
+
+@media (max-width: 460px) {
+  .user_container {
+    display: flex;
+  }
+  .profile_box {
+    flex-direction: column;
+    min-width: 0 !important;
+    width: 100%;
+  }
+
+  .profile_box,
+  .bio_box,
+  .link_box,
+  .repo_box {
+    width: 100%;
+  }
+
+  .profile_box .right_box {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    height: max-content;
+    gap: 1rem;
+  }
+
+  .profile_box .right_box-top {
+    align-items: center;
+  }
+
+  .profile_box .right_box-bottom {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+  }
+}
