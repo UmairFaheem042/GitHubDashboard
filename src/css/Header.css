@@ -56,8 +56,9 @@ header nav {
 }
 
 .searchContainer button:hover {
-  background-color: #763ec6;
-  border: 1px solid #763ec6;
+  /* background-color: #763ec6; */
+  /* border: 1px solid #763ec6; */
+  color: #212121;
 }
 
 .searchContainer input:focus{

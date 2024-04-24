@@ -6,20 +6,13 @@
 }
 
 .user_container {
-  /* display: grid; */
-  /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
-  /* grid-template-columns: repeat(2, 1fr); */
   display: flex;
-  /* flex-direction: column; */
   flex-wrap: wrap;
-
   gap: 1rem;
 }
 
-/* BOX */
 .box {
   background-color: #161616;
-
   border: 2px solid rgba(255, 255, 255, 0.11);
   padding: 1rem;
   border-radius: 10px;
@@ -30,11 +23,8 @@
 }
 
 .profile_box {
-  /* width: 100%; */
   flex: 1;
-  /* width: 50%; */
   min-width: 500px;
-  /* width: 500px; */
 }
 
 .user .profile_box img {
@@ -73,12 +63,12 @@
 
 .right_box-bottom span {
   font-weight: 600;
-  color: white;
+  /* color: white; */
+  color: #a68cfb;
 }
 
 .bio_box {
   flex-direction: column;
-  /* flex: 1; */
   align-items: flex-start;
   justify-content: flex-start;
   gap: 0rem;
@@ -138,7 +128,6 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 1rem;
-  /* background-color: bisque; */
 }
 
 .repos .repo {
@@ -146,17 +135,14 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-  /* width: 100%; */
   min-height: 150px;
 }
 
 .repo_top {
-  /* background-color: aquamarine; */
   width: 100%;
 }
 
 .repo_top header {
-  /* background-color: #763ec6; */
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -164,15 +150,13 @@
 }
 
 .repo_top header h2 {
-  /* text-overflow: none; */
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
-  -webkit-line-clamp: 1; /* number of lines to show */
+  -webkit-line-clamp: 1;
   line-clamp: 1;
   -webkit-box-orient: vertical;
-  /* font-size: 600; */
-  color: #763ec6;
+  color: #a68cfb;
 }
 
 .repo header span {
@@ -205,25 +189,20 @@
   font-weight: 600;
 }
 
-
-.pagination{
+.pagination {
   width: 100%;
-  /* background-color: red; */
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.pagination button{
+.pagination button {
   border-radius: 5px;
   min-width: 100px;
 }
 
-
-
 @media (max-width: 961px) {
   .bio_box {
-    background-color: #763ec6;
     width: 100%;
   }
 }
@@ -234,10 +213,8 @@
   }
 
   .profile_box {
-    /* width: 100%; */
     min-width: auto;
     flex-wrap: wrap;
-    /* align-items: ; */
   }
 
   .profile_box img {
