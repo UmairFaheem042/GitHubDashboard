@@ -83,7 +83,7 @@ footer p span {
 .btn:hover {
   background-color: #a68cfb;
   border: 1px solid #a68cfb;
-  color: #161616;
+  /* color: #161616; */
 }
 
 .notFound {
