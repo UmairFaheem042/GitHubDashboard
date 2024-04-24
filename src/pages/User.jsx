@@ -53,7 +53,6 @@ const User = () => {
         `https://api.github.com/users/${username}/repos?page=${page}`
       );
       const data = await res.json();
-      console.log(data);
 
       if (data.length === 0) {
         setHasMoreRepos(false);
@@ -77,9 +76,6 @@ const User = () => {
   const handleLoadMore = () => {
     setPage((prevPage) => prevPage + 1); // Update the page number
   };
-
-  // console.log(userInfo);
-  // console.log(repositories);
 
   if (loading) return <LoadingScreen />;
 

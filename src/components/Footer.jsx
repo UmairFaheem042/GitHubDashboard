@@ -5,7 +5,12 @@ const Footer = () => {
     <footer>
       <nav className="maxWidth">
         <p>
-          Developed by 🧑‍💻 <span>Umair Faheem</span>
+          Developed by 🧑‍💻{" "}
+          <span>
+            <a href="https://umairfaheem.framer.website" target="_blank">
+              Umair Faheem
+            </a>
+          </span>
         </p>
       </nav>
     </footer>
