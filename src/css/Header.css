@@ -5,7 +5,6 @@ header nav {
   gap: 1rem;
   padding: 0.2rem 1rem;
   max-width: 1600px;
-  /* background-color: red; */
   margin: 0 auto;
 }
 
@@ -38,7 +37,6 @@ header nav {
 .searchContainer span {
   border: 1px solid rgba(255, 255, 255, 0.08);
   padding: 0.3rem 0.7rem;
-  /* padding: 0.5rem 1rem; */
   font-size: 0.8rem;
   margin: 0.3rem;
   border-radius: 3px;
@@ -55,15 +53,6 @@ header nav {
   font-weight: 600;
 }
 
-.searchContainer button:hover {
-  /* background-color: #763ec6; */
-  /* border: 1px solid #763ec6; */
-  /* color: #212121; */
-}
-
-.searchContainer input:focus{
-  /* background-color: red; */
-}
 
 .focusField{
   background-color: #212121;

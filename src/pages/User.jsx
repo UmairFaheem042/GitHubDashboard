@@ -18,6 +18,7 @@ const User = () => {
   const [errorOccur, setErrorOccur] = useState(true);
   const [page, setPage] = useState(1);
   const [hasMoreRepos, setHasMoreRepos] = useState(true);
+  const [searchKeyword, setSearchKeyword] = useState("");
 
   useEffect(() => {
     async function fetchUser() {
@@ -76,6 +77,12 @@ const User = () => {
   const handleLoadMore = () => {
     setPage((prevPage) => prevPage + 1); // Update the page number
   };
+
+  const filteredRepositories = repositories.filter((repo) =>
+    repo.name.toLowerCase().includes(searchKeyword.toLowerCase())
+  );
+
+  console.log(filteredRepositories);
 
   if (loading) return <LoadingScreen />;
 
@@ -136,15 +143,22 @@ const User = () => {
           <header>
             <h2>Repositories</h2>
             {repositories.length !== 0 && (
-              <SearchContainer
-                placeholderText={"Find a repository..."}
-                notSlash={true}
+              <input
+                type="text"
+                placeholder={"Find a repository..."}
+                value={searchKeyword}
+                onChange={(e) => setSearchKeyword(e.target.value)}
+                required
+                id="search-input"
               />
             )}
           </header>
           {repositories.length !== 0 ? (
             <div className="repos">
-              {repositories.map((repo) => (
+              {/* {repositories.map((repo) => (
+                <Repository key={repo.id} data={repo} />
+              ))} */}
+              {filteredRepositories.map((repo) => (
                 <Repository key={repo.id} data={repo} />
               ))}
             </div>

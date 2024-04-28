@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import Button from "./Button";
 
-const SearchContainer = ({ placeholderText, notSlash }) => {
+const SearchContainer = ({ placeholderText, notSlash, onChange }) => {
   const location = useLocation();
   const [searchUser, setSearchUser] = useState("");
   const navigate = useNavigate();
@@ -22,10 +22,6 @@ const SearchContainer = ({ placeholderText, notSlash }) => {
       document.removeEventListener("keydown", handleKeyDown);
     };
   }, []);
-
-  // document.querySelector(".searchContainer").addEventListener("focus", (e) => {
-  //   document.querySelector(".searchContainer").classList.add("focusField");
-  // });
 
   const handleFocus = () => {
     document.querySelector(".searchContainer").classList.add("focusField");
@@ -52,7 +48,10 @@ const SearchContainer = ({ placeholderText, notSlash }) => {
         type="text"
         placeholder={placeholderText}
         value={searchUser}
-        onChange={(e) => setSearchUser(e.target.value)}
+        onChange={(e) => {
+          setSearchUser(e.target.value);
+          onChange(e.target.value);
+        }}
         required
         id="search-input"
       />

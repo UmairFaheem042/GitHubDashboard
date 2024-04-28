@@ -107,6 +107,7 @@
 .repo_box {
   margin-top: 2rem;
   grid-column: span 2;
+  width: 100%;
 }
 
 .repo_box header {
@@ -122,6 +123,16 @@
 .repo_box header {
   display: flex;
   justify-content: space-between;
+}
+
+.repo_box input {
+  background-color: rgb(27, 27, 27);
+  border: 1px solid rgb(47, 47, 47);
+  border-radius: 5px;
+  padding: 0.5rem;
+}
+.repo_box input:is(:hover,:focus) {
+  background-color: #212121;
 }
 
 .repos {
