@@ -1,7 +1,8 @@
-# GitHub Dashboard Using ReactJS
+# GitHub Dashboard Using ReactJS: GITSEEKER
 
 ## uses GitHub API
 
+# Link: https://gitseeker.vercel.app/
 
 Screenshots:
 
